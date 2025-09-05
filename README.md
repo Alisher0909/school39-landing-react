@@ -1,12 +1,84 @@
-# React + Vite
+# School39 Landing (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ushbu loyiha **39-Maktab** uchun yaratilgan **landing sahifa** bo‘lib, maktab haqida qisqa ma’lumot, yangiliklar, imkoniyatlar va kontakt ma’lumotlarini taqdim etadi.
 
-Currently, two official plugins are available:
+Frontend qismi **React 19 + Vite** asosida yozilgan va **Material UI v7** komponentlari ishlatilgan.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Xususiyatlar
 
-## Expanding the ESLint configuration
+* **Hero Section** – maktab rasmi, slogan va CTA tugmasi.
+* **Yangiliklar bo‘limi (Posts)** – markdown fayllardan yangiliklarni o‘qish va ko‘rsatish.
+* **Imkoniyatlar (Features)** – 6–8 ta maktab afzalliklari.
+* **Kontakt bo‘limi (Contact)** – manzil, telefon raqami, email va (ixtiyoriy) xarita iframe.
+* **Responsive dizayn** – mobil qurilmalarda ham qulay ishlaydi.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Loyihaning tuzilishi
+
+```
+school39-landing/
+│
+├── public/
+│   └── posts/          # Markdown postlar va ularning rasmlari
+│       ├── posts.json  # Postlar ro‘yxati (slug, title, description, date, image)
+│
+├── src/
+│   ├── Components/     # Hero, Posts, Features, Contact komponentlari
+│   ├── App.tsx
+│   └── main.tsx
+│
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+## ⚡️ Texnologiyalar
+
+* [React 19](https://react.dev)
+* [Vite 7](https://vitejs.dev)
+* [Material UI v7](https://mui.com)
+* [React Router v7](https://reactrouter.com)
+* [React Markdown](https://github.com/remarkjs/react-markdown)
+
+## 🛠 Ishga tushirish
+
+1. Repository’ni clone qiling:
+
+   ```bash
+   git clone https://github.com/<username>/school39-landing.git
+   cd school39-landing
+   ```
+
+2. Paketlarni o‘rnating:
+
+   ```bash
+   npm install
+   ```
+
+3. Development server ishga tushiring:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Production uchun build qiling:
+
+   ```bash
+   npm run build
+   ```
+
+5. Build’ni preview qilish:
+
+   ```bash
+   npm run preview
+   ```
+
+## 🌍 Deployment
+
+Loyiha **Vercel** orqali deploy qilinadi. Deployment uchun:
+
+1. Repository’ni GitHub’ga yuklang.
+2. [Vercel](https://vercel.com) ga kiring va GitHub repo’ni ulang.
+3. Default build komandasi: `npm run build`
+4. Output directory: `dist`
+
+Deploymentdan keyin `https://school39.vercel.app` kabi URL orqali sahifani ko‘rish mumkin.
