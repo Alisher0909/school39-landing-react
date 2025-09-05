@@ -12,5 +12,12 @@
       "description": "Maktabimizda yangi sport majmuasi ochildi!",
       "date": "2025-04-15",
       "image": "/posts/new-sports-complex-1.png"
+    },
+    {
+      "slug": "science-fair-2025",
+      "title": "Ilmiy Yarmarka 2025",
+      "description": "Maktabimizda o'tkazilgan ilmiy yarmarka haqida ma'lumot.",
+      "date": "2025-03-20",
+      "image": "/posts/science-fair-2025-1.jpg"
     }
 ]

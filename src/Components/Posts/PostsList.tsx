@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
 import { Box, Card, CardContent, CardMedia, Typography, Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 interface Post {
   slug: string;
