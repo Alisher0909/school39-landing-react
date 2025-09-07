@@ -1,12 +1,12 @@
 import {
   Box,
   Typography,
-  Grid,
   Container,
   Paper,
   Link,
   Divider
 } from '@mui/material';
+import Grid from '@mui/material/Grid';
 import {
   LocationOn,
   Email,
@@ -61,7 +61,7 @@ const ContactSection: React.FC = () => {
                       Telefon
                     </Typography>
                     <Link
-                      href="tel:+998712345678"
+                      href="tel:+998946357333"
                       variant="body1"
                       sx={{ textDecoration: 'none', color: 'primary.main' }}
                     >
@@ -129,9 +129,8 @@ const ContactSection: React.FC = () => {
                   src="https://yandex.com/map-widget/v1/-/CLQqJ6pk"
                   width="100%"
                   height="450"
-                  frameBorder="0"
-                  title="Maktab joylashuvi"
                   style={{ border: 'none' }}
+                  title="Maktab joylashuvi"
                 ></iframe>
               </Box>
 
