@@ -6,7 +6,7 @@ import {
   Link,
   Divider
 } from '@mui/material';
-import Grid2 from '@mui/material/Grid2';
+import Grid2 from '@mui/material/Unstable_Grid2';
 import {
   LocationOn,
   Email,
@@ -30,7 +30,8 @@ const ContactSection: React.FC = () => {
         </Typography>
 
         <Grid2 container spacing={2}>
-          <Grid2 item xs={12} md={6}>
+          {/* Chap taraf */}
+          <Grid2 xs={12} md={6}>
             <Paper elevation={2} sx={{ p: 4, height: '100%' }}>
               <Typography variant="h5" gutterBottom sx={{ color: 'primary.main', mb: 3 }}>
                 Aloqa ma'lumotlari
@@ -110,7 +111,8 @@ const ContactSection: React.FC = () => {
             </Paper>
           </Grid2>
 
-          <Grid2 item xs={12} md={6}>
+          {/* O‘ng taraf */}
+          <Grid2 xs={12} md={6}>
             <Paper elevation={2} sx={{ p: 4, height: '100%' }}>
               <Typography variant="h4" gutterBottom sx={{ color: 'primary.main', mb: 3 }}>
                 Maktab joylashuvi
