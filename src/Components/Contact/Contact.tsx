@@ -6,7 +6,7 @@ import {
   Link,
   Divider
 } from '@mui/material';
-import Grid from '@mui/material/Grid';
+import Grid2 from '@mui/material/Grid2';
 import {
   LocationOn,
   Email,
@@ -29,8 +29,8 @@ const ContactSection: React.FC = () => {
           Biz bilan bog'lanish
         </Typography>
 
-        <Grid container spacing={2}>
-          <Grid item xs={12} md={6}>
+        <Grid2 container spacing={2}>
+          <Grid2 item xs={12} md={6}>
             <Paper elevation={2} sx={{ p: 4, height: '100%' }}>
               <Typography variant="h5" gutterBottom sx={{ color: 'primary.main', mb: 3 }}>
                 Aloqa ma'lumotlari
@@ -108,9 +108,9 @@ const ContactSection: React.FC = () => {
                 </Box>
               </Box>
             </Paper>
-          </Grid>
+          </Grid2>
 
-          <Grid item xs={12} md={6}>
+          <Grid2 item xs={12} md={6}>
             <Paper elevation={2} sx={{ p: 4, height: '100%' }}>
               <Typography variant="h4" gutterBottom sx={{ color: 'primary.main', mb: 3 }}>
                 Maktab joylashuvi
@@ -143,8 +143,8 @@ const ContactSection: React.FC = () => {
                 transport vositalari bilan qulay yetib borish mumkin.
               </Typography>
             </Paper>
-          </Grid>
-        </Grid>
+          </Grid2>
+        </Grid2>
       </Container>
     </Box>
   );
