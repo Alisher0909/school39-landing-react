@@ -1,25 +1,31 @@
 import React from "react";
-import { Container } from "@mui/material";
+import { Container, Box } from "@mui/material";
 import Hero from "../Components/Hero/Hero";
 import PostsList from "../Components/Posts/PostsList";
 import Features from "../Components/Features/Features";
-import Contact from "../Components/Contact/Contact";
+import Contact from "../Components/Contact/ContactSection";
 
 const Home: React.FC = () => {
   return (
-    <Container maxWidth="lg">
-      {/* Hero section */}
+    <>
+      {/* Hero section - full width */}
       <Hero />
 
-      {/* Posts section */}
-      <PostsList />
+      {/* Other sections inside container */}
+      <Container maxWidth="lg">
+        <Box component="section">
+          <PostsList />
+        </Box>
 
-      {/* Features section */}
-      <Features />
+        <Box component="section">
+          <Features />
+        </Box>
 
-      {/* Contact section */}
-      <Contact />
-    </Container>
+        <Box component="section">
+          <Contact />
+        </Box>
+      </Container>
+    </>
   );
 };
 

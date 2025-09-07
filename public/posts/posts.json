@@ -4,20 +4,20 @@
       "title": "Bitiruv Marosimi 2025",
       "description": "2025-yil bitiruvchilar marosimi haqida to‘liq hisobot.",
       "date": "2025-05-30",
-      "image": "/posts/graduation-ceremony-2025-1.jpg"
-    },
-    {
-      "slug": "new-sports-complex",
-      "title": "Yangi Sport Majmuasi",
-      "description": "Maktabimizda yangi sport majmuasi ochildi!",
-      "date": "2025-04-15",
-      "image": "/posts/new-sports-complex-1.png"
+      "thumbnail": "/posts/graduation-ceremony-2025/images/header.png"
     },
     {
       "slug": "science-fair-2025",
       "title": "Ilmiy Yarmarka 2025",
       "description": "Maktabimizda o'tkazilgan ilmiy yarmarka haqida ma'lumot.",
       "date": "2025-03-20",
-      "image": "/posts/science-fair-2025-1.jpg"
+      "thumbnail": "/images/science-fair-2025.png"
+    },
+    {
+      "slug": "sport-zal",
+      "title": "Maktabda yangi sport zal ochildi",
+      "description": "Maktabimizda yangi zamonaviy sport zal foydalanishga topshirildi.",
+      "date": "2025-09-07",
+      "thumbnail": "/images/sport-zal.png"
     }
 ]
