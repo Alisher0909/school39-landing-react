@@ -3,9 +3,9 @@ import { CssBaseline, Container } from "@mui/material";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Hero from "./Components/Hero/Hero";
-import PostsList from "./Components/Posts/PostsList";
+import PostsList from "./Components/Posts/PostList";
 import Features from "./Components/Features/Features";
-import Contact from "./Components/Contact/ContactSection";
+import Contact from "./Components/Contact/Contact";
 import Post from "./pages/Post";
 
 export default function App() {

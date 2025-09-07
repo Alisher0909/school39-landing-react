@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Box } from "@mui/material";
 import Hero from "../Components/Hero/Hero";
-import PostsList from "../Components/Posts/PostsList";
+import PostsList from "../Components/Posts/PostList";
 import Features from "../Components/Features/Features";
-import Contact from "../Components/Contact/ContactSection";
+import Contact from "../Components/Contact/Contact";
 
 const Home: React.FC = () => {
   return (

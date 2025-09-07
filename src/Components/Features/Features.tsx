@@ -1,66 +1,145 @@
-import React from "react";
-import { Box, Paper, Typography, Grid } from "@mui/material";
-import { motion } from "framer-motion";
-import SchoolIcon from "@mui/icons-material/School";
-import SportsSoccerIcon from "@mui/icons-material/SportsSoccer";
-import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
-import ComputerIcon from "@mui/icons-material/Computer";
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
-import SecurityIcon from "@mui/icons-material/Security";
-import SportsBasketballIcon from "@mui/icons-material/SportsBasketball";
-import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
+import { 
+  Box, 
+  Typography,  
+  Card, 
+  CardContent, 
+  Container,
+  Avatar
+} from '@mui/material';
+import {
+  SportsSoccer,
+  School,
+  Computer,
+  Security,
+  LibraryBooks,
+  Restaurant,
+  Psychology,
+  MusicNote
+} from '@mui/icons-material';
+import React from 'react';
 
-const features = [
-  { title: "Yangi sport majmuasi", icon: <FitnessCenterIcon fontSize="large" color="primary" /> },
-  { title: "Zamonaviy kutubxona", icon: <LibraryBooksIcon fontSize="large" color="primary" /> },
-  { title: "Ingliz tili qo‘shimcha darslari", icon: <SchoolIcon fontSize="large" color="primary" /> },
-  { title: "IT laboratoriya", icon: <ComputerIcon fontSize="large" color="primary" /> },
-  { title: "Xavfsizlik zonasi", icon: <SecurityIcon fontSize="large" color="primary" /> },
-  { title: "Futbol maydoni", icon: <SportsSoccerIcon fontSize="large" color="primary" /> },
-  { title: "Basketbol zali", icon: <SportsBasketballIcon fontSize="large" color="primary" /> },
-  { title: "Musiqa xonasi", icon: <MusicNoteIcon fontSize="large" color="primary" /> },
-];
+function FeaturesSection() {
+  const features = [
+    {
+      icon: <SportsSoccer sx={{ fontSize: 40 }} />,
+      title: "Zamonaviy sport maydoni",
+      description: "Futbol, basketbol va voleybol maydonlari bilan jihozlangan sport kompleksi"
+    },
+    {
+      icon: <School sx={{ fontSize: 40 }} />,
+      title: "Malakali o'qituvchilar",
+      description: "Yuqori malakali va tajribali o'qituvchilar jamoasi"
+    },
+    {
+      icon: <Computer sx={{ fontSize: 40 }} />,
+      title: "Zamonaviy kompyuter sinflari",
+      description: "Eng so'nggi texnologiyalar bilan jihozlangan informatika sinflari"
+    },
+    {
+      icon: <Security sx={{ fontSize: 40 }} />,
+      title: "Xavfsiz muhit",
+      description: "O'quvchilar uchun xavfsiz va qulay ta'lim muhiti"
+    },
+    {
+      icon: <LibraryBooks sx={{ fontSize: 40 }} />,
+      title: "Keng kutubxona",
+      description: "Zamonaviy va klassik adabiyotlar bilan boy kutubxona"
+    },
+    {
+      icon: <Restaurant sx={{ fontSize: 40 }} />,
+      title: "Sog'lom ovqatlanish",
+      description: "Sog'lom va mazali ovqatlar bilan ta'minlangan oshxona"
+    },
+    {
+      icon: <MusicNote sx={{ fontSize: 40 }} />,
+      title: "Musiqa xonasi",
+      description: "Musiqa va san'atga qiziqqan o'quvchilar uchun maxsus xona"
+    },
+    {
+      icon: <Psychology sx={{ fontSize: 40 }} />,
+      title: "Psixologik yordam",
+      description: "O'quvchilar uchun psixologik maslahat va yordam xizmati"
+    }
+  ];
 
-export default function Features() {
   return (
-    <Box id="features" sx={{ py: 6, px: 2, backgroundColor: "#f5f5f5" }}>
-      <Typography
-        variant="h4"
-        component="h2"
-        textAlign="center"
-        fontWeight="bold"
-        mb={4}
-      >
-        Maktab Imkoniyatlari
-      </Typography>
-
-      <Grid container spacing={3}>
-        {features.map((f, idx) => (
-          <Grid item xs={12} sm={6} md={3} key={idx}>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              whileHover={{ scale: 1.05 }}
-            >
-              <Paper
-                elevation={3}
-                sx={{
-                  p: 3,
-                  textAlign: "center",
-                  transition: "transform 0.3s",
-                  cursor: "pointer",
+    <Box sx={{ py: 6 }}>
+      <Container maxWidth="xl">
+        <Typography 
+          variant="h2" 
+          component="h2" 
+          gutterBottom
+          sx={{ 
+            mb: 5,
+            fontWeight: 800,
+            fontSize: { xs: '1.75rem', md: '2.25rem' },
+            lineHeight: 1.2,
+            letterSpacing: '-0.01em',
+            color: 'primary.main',
+            textAlign: 'center'
+          }}
+        >
+          Maktab imkoniyatlari
+        </Typography>
+        
+        <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(1, 1fr)', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)' }, gap: { xs: 3, md: 4 } }}>
+          {features.map((feature, index) => (
+            <Box key={index}>
+              <Card 
+                sx={{ 
+                  height: '100%',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  textAlign: 'center',
+                  p: 2,
+                  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: '0 8px 25px rgba(0,0,0,0.15)',
+                  }
                 }}
               >
-                {f.icon}
-                <Typography mt={1} fontWeight="medium">
-                  {f.title}
-                </Typography>
-              </Paper>
-            </motion.div>
-          </Grid>
-        ))}
-      </Grid>
+                <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  <Avatar
+                    sx={{
+                      width: 80,
+                      height: 80,
+                      mx: 'auto',
+                      mb: 2,
+                      bgcolor: 'primary.main',
+                      color: 'white',
+                    }}
+                  >
+                    {feature.icon}
+                  </Avatar>
+                  <Typography 
+                    variant="h6" 
+                    component="h3" 
+                    gutterBottom
+                    sx={{ 
+                      fontWeight: 700,
+                      minHeight: 56,
+                      color: 'primary.main',
+                      mb: 2
+                    }}
+                  >
+                    {feature.title}
+                  </Typography>
+                  <Typography 
+                    variant="body2" 
+                    color="text.secondary"
+                    sx={{ lineHeight: 1.7, display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}
+                  >
+                    {feature.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Box>
+          ))}
+        </Box>
+      </Container>
     </Box>
   );
 }
+
+export default FeaturesSection;
