@@ -33,9 +33,9 @@ school39-landing/
 
 ## ⚡️ Texnologiyalar
 
-* [React 19](https://react.dev)
+* [React 18](https://react.dev)
 * [Vite 7](https://vitejs.dev)
-* [Material UI v7](https://mui.com)
+* [Material UI v5](https://mui.com)
 * [React Router v7](https://reactrouter.com)
 * [React Markdown](https://github.com/remarkjs/react-markdown)
 
@@ -44,8 +44,8 @@ school39-landing/
 1. Repository’ni clone qiling:
 
    ```bash
-   git clone https://github.com/<username>/school39-landing.git
-   cd school39-landing
+   git clone https://github.com/Alisher0909/school39-landing-react.git
+   cd school39-landing-react
    ```
 
 2. Paketlarni o‘rnating:

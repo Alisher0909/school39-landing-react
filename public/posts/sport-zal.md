@@ -8,6 +8,6 @@ Bugun 39-maktabda yangi **sport zal** foydalanishga topshirildi. Ushbu zal zamon
 - Fitnes uchun alohida xona  
 - 200 nafardan ortiq o‘quvchi sig‘adi  
 
-![Sport zal rasmi](/public/img/sport-zal.png)
+![Sport zal rasmi](/images/sport-zal.png)
 
 Maktab direktori bu yangi zal o‘quvchilarning sog‘lom turmush tarzini rivojlantirishda katta hissa qo‘shishini ta’kidladi.

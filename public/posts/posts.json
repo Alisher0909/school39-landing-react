@@ -1,22 +1,25 @@
 [
   {
-    "slug": "sport-zal",
+    "slug": "Sport-zal",
     "title": "Maktabda yangi sport zal ochildi",
     "description": "Maktabimizda yangi zamonaviy sport zal foydalanishga topshirildi.",
+    "timestamp": "2025-09-07T16:51:12.000Z",
     "date": "2025-09-07",
     "thumbnail": "/posts/sport-zal/images/header.png"
   },
   {
-    "slug": "graduation-ceremony-2025",
+    "slug": "Graduation-ceremony-2025",
     "title": "Bitiruv Marosimi 2025",
     "description": "2025-yil bitiruvchilar marosimi haqida to‘liq hisobot.",
+    "timestamp": "2025-09-07T16:51:12.000Z",
     "date": "2025-05-30",
     "thumbnail": "/posts/graduation-ceremony-2025/images/header.png"
   },
   {
-    "slug": "science-fair-2025",
+    "slug": "Science-fair-2025",
     "title": "Ilmiy Yarmarka 2025",
     "description": "Maktabimizda o'tkazilgan ilmiy yarmarka haqida ma'lumot.",
+    "timestamp": "2025-09-07T16:51:12.000Z",
     "date": "2025-03-20",
     "thumbnail": "/posts/science-fair-2025/images/header.png"
   }
