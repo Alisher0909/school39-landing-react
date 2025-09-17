@@ -2,7 +2,7 @@
 
 Ushbu loyiha **39-Maktab** uchun yaratilgan **landing sahifa** bo‘lib, maktab haqida qisqa ma’lumot, yangiliklar, imkoniyatlar va kontakt ma’lumotlarini taqdim etadi.
 
-Frontend qismi **React 19 + Vite** asosida yozilgan va **Material UI v7** komponentlari ishlatilgan.
+Frontend qismi **React 18 + Vite** asosida yozilgan va **Material UI v5** komponentlari ishlatilgan.
 
 ## 🚀 Xususiyatlar
 
