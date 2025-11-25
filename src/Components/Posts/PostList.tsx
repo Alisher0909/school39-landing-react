@@ -51,6 +51,7 @@ function PostList() {
           );
 
           setPosts(sortedCachedPosts);
+          setScrollPosition(0); // Reset scroll position
           setLoading(false);
           return;
         }
@@ -70,16 +71,17 @@ function PostList() {
           )
           .map((post) => ({
             ...post,
-            thumbnail: getImageUrl(post.thumbnail),
+            thumbnail: post.thumbnail ? getImageUrl(post.thumbnail) : undefined,
           }));
 
         setPosts(postsWithFixedImages);
 
         // Cache-ga yozish
-        setCachedData(CACHE_KEYS.POSTS, data);
+        setCachedData(CACHE_KEYS.POSTS, postsWithFixedImages);
         console.log("💾 Posts saved to local storage");
       } catch (error) {
         console.error("Error loading posts:", error);
+        alert("Failed to load posts. Please try again later."); // User-friendly error message
       } finally {
         setLoading(false);
       }
@@ -116,13 +118,11 @@ function PostList() {
     const container = document.getElementById("posts-scroll-container");
     if (container) {
       const scrollAmount = 320;
+      const maxScrollPosition = container.scrollWidth - container.clientWidth;
       const newPosition =
         direction === "left"
           ? Math.max(0, scrollPosition - scrollAmount)
-          : Math.min(
-              container.scrollWidth - container.clientWidth,
-              scrollPosition + scrollAmount
-            );
+          : Math.min(maxScrollPosition, scrollPosition + scrollAmount);
 
       container.scrollTo({ left: newPosition, behavior: "smooth" });
       setScrollPosition(newPosition);
@@ -183,6 +183,7 @@ function PostList() {
           <IconButton
             onClick={() => handleScroll("left")}
             disabled={!canScrollLeft}
+            aria-label="Scroll left to view more posts"
             sx={{
               position: "absolute",
               left: -20,
@@ -206,6 +207,7 @@ function PostList() {
           <IconButton
             onClick={() => handleScroll("right")}
             disabled={!canScrollRight}
+            aria-label="Scroll right to view more posts"
             sx={{
               position: "absolute",
               right: -20,
@@ -281,7 +283,7 @@ function PostList() {
                       component="img"
                       height="180"
                       image={post.thumbnail}
-                      alt={post.title}
+                      alt={post.title || "Post thumbnail"} // Fallback alt text
                       sx={{
                         objectFit: "cover",
                         width: "100%",

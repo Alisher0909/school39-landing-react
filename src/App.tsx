@@ -7,6 +7,7 @@ import PostsList from "./Components/Posts/PostList";
 import Features from "./Components/Features/Features";
 import Contact from "./Components/Contact/Contact";
 import Post from "./pages/Post";
+import PostPage from "./pages/PostPage";
 
 export default function App() {
   return (
@@ -30,6 +31,7 @@ export default function App() {
 
         {/* Dynamic post page */}
         <Route path="/posts/:slug" element={<Post />} />
+        <Route path="/posts/:slug" element={<PostPage />} />
       </Routes>
     </Router>
   );
